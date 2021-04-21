@@ -6,11 +6,13 @@
 
 This script was created to convert individual sample files previously
 made by Data Splitter into PmagPy generic format. Files produced by this 
-script can be used with PmagPy and paleointensity.org. 
+script can be used with PmagPy and paleointensity.org.
+
+[![Demo data.](/assets/input-output.png)]
 
 ## How to use
 
-1) Put individual sample files (such as those split by Data Splitter) that you want 
+1) Put individual sample files (such as those split by [Data Splitter](https://github.com/katiebristol/data_splitter)) that you want 
 converted into the /input/ folder.
 2) Run the script
 3) Check the /output/ folder for your converted files. 
