@@ -1,25 +1,27 @@
-# Izzi Converter
+# IZZI Converter
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 ## Purpose
 
-This script was created to split a .dat file into separate sample files to cut
-down on data processing time. The result is individual sample files that are space-delimited.
+This script was created to convert individual sample files previously
+made by Data Splitter into PmagPy generic format. Files produced by this 
+script can be used with PmagPy and paleointensity.org. 
 
 ## Inputs
 
-This script requires a .dat file placed into the /data/ directory. 
+This script requires .dat files that you want converted placed into the
+/input/ folder. 
 
 ## Outputs
 
-This script will create files for each sample measured in a .dat file.
-The output will write to the /results/ folder. 
+This script will create converted files with the same name. 
+The converted files will write to the /output/ folder. 
 
 ## Notes
 
-This script was made specifically for files produced by the CryoPC3 magnetometer control software,
-but it may work with other softwares as well. 
+This script was made in conjunction with the Data Splitter script.
+It is intended to be used afterwards to convert data to PmagPy generic/paleointensity.org friendly formats.
 
 ## License
 
