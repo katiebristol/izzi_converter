@@ -1,0 +1,2 @@
+specimen	treatment	treatment_type	moment	dec_s	inc_s
+I916-2B	0.0	T	1.71083	217.0	74.8
