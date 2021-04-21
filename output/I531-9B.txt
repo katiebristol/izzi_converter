@@ -1,2 +1,0 @@
-specimen	treatment	treatment_type	moment	dec_s	inc_s
-I531-9B	0.0	T	5.21859	245.5	-30.1

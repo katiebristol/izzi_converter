@@ -1,2 +1,0 @@
-specimen	treatment	treatment_type	moment	dec_s	inc_s
-I531-8C	0.0	T	2.27488	62.9	-27.3
