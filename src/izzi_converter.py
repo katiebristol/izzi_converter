@@ -31,7 +31,7 @@ for currentInput in inputList:
                 next_line_array = next_line_array[0:7] 
                 del next_line_array[3]
                 print(next_line_array)
-                next_line_array[3] = float(next_line_array[3])*10**-3
+                next_line_array[3] = float(next_line_array[3])*10**-2 #Convert from Oe to A/m (Cryo assumes 10cc vol.)
                 #stop editing the array
                 next_line = str(next_line_array).replace("'", "").replace(",","").replace("[", "").replace("]","").replace("Cm","T") #Array to string
                 write_file.write(str(next_line.replace(' ', '\t'))+'\n') #generic_izzi.txt is like a csv but tabs instead of commas replace space with tab
