@@ -6,7 +6,8 @@
 
 This script was created to convert individual sample files previously
 made by Data Splitter into PmagPy generic format. Files produced by this 
-script can be used with PmagPy and paleointensity.org.
+script can be used with PmagPy and paleointensity.org. Field intensity
+is output in A/m assuming a sample volume of 10cc. 
 
 ![Demo data.](/assets/input-output.png)
 
