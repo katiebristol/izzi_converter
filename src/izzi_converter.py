@@ -32,7 +32,8 @@ for currentInput in inputList:
                 print(next_line_array)
                 next_line_array[3] = float(next_line_array[3])*10**-2 #Convert from Oe to A/m (Cryo assumes 10cc vol.)
                 #stop editing the array
-                next_line = str(next_line_array).replace("'", "").replace(",","").replace("[", "").replace("]","").replace("Cm","T") #Array to string
+                
+                next_line = " ".join(str(x) for x in next_line_array).replace("Cm","T") #Array to string, replacing Cm with T
                 write_file.write(str(next_line.replace(' ', '\t'))+'\n') #generic_izzi.txt is like a csv but tabs instead of commas replace space with tab
             except IndexError:
                 print("Index out of range error on this:")
