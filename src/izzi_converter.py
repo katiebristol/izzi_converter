@@ -22,8 +22,8 @@ for currentInput in inputList:
             next_line_array = next_line.split(",")
             
             
-            if line_number < 6: #Still ignore header
-                header = header + next_line + '\n'
+            if line_number == 1: #Ignore header line (line 1)
+                header = header + next_line + '\n' #Unused addition to header variable
                 continue
 
             try:
