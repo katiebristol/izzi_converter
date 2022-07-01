@@ -11,8 +11,8 @@ for currentInput in inputList:
     add_header = False
     with open('./input/' + currentInput, "r") as a_file:
         write_file = open('output/' + currentInput, 'a+')
-        headers = str(headers).replace("'", "").replace(",","").replace("[", "").replace("]","")
-        
+        headers = " ".join(headers)
+
         write_file.write(str(headers.replace(' ', '\t'))+'\n')
         for line in a_file:
             line_number+=1
@@ -22,13 +22,12 @@ for currentInput in inputList:
             next_line_array = next_line.split(",")
             
             
-            if line_number < 6: #Still ignore header
-                header = header + next_line + '\n'
+            if line_number == 1: #Ignore header line (line 1)
+                header = header + next_line + '\n' #Unused addition to header variable
                 continue
-
             try:
                 #Edit array
-                next_line_array = next_line_array[0:7] 
+                next_line_array = next_line_array[0:len(headers)] 
                 del next_line_array[3]
                 print(next_line_array)
                 next_line_array[3] = float(next_line_array[3])*10**-2 #Convert from Oe to A/m (Cryo assumes 10cc vol.)
