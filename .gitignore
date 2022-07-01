@@ -1,5 +1,5 @@
 #Ignore all txt files within input and output directories
 input/*.txt
 output/*.txt
-!input
-!output
+!input/sample.txt
+!output/sample.txt
