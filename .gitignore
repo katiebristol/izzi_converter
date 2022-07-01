@@ -1,0 +1,3 @@
+#Ignore all txt files within input and output directories
+input/*.txt
+output/*.txt
