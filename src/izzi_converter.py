@@ -3,6 +3,7 @@ from os import path
 from pathlib import Path
 
 headers = ["specimen", "treatment", "treatment_type", "moment", "dec_s", "inc_s"]
+headers = " ".join(headers)
 rootPath = Path('./input')
 inputList = [e for e in os.listdir(rootPath) if not os.path.isdir(e)]
 for currentInput in inputList:
@@ -11,8 +12,6 @@ for currentInput in inputList:
     add_header = False
     with open('./input/' + currentInput, "r") as a_file:
         write_file = open('output/' + currentInput, 'a+')
-        headers = " ".join(headers)
-
         write_file.write(str(headers.replace(' ', '\t'))+'\n')
         for line in a_file:
             line_number+=1
