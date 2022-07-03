@@ -1,13 +1,13 @@
-# IZZI Converter
+# Generic IZZI Converter
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 ## Purpose
 
 This script was created to convert individual sample files previously
-made by Data Splitter into PmagPy generic format. Files produced by this 
-script can be used with PmagPy and paleointensity.org. Field intensity
-is output in A/m assuming a sample volume of 10cc. 
+made by Data Splitter into generic PmagPy format for IZZI paleointensity experiments.
+Files produced by this script can be used with PmagPy and paleointensity.org. 
+Field intensity is output in A/m assuming a sample volume of 10cc. 
 
 ![Demo data.](/assets/input-output.png)
 
