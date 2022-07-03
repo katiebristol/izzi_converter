@@ -1,4 +1,5 @@
 import os.path
+from math import pi
 from os import path
 from pathlib import Path
 
@@ -20,20 +21,16 @@ for currentInput in inputList:
 
             next_line_array = next_line.split(",")
             
-            
-            if line_number < 6: #Ignore header line (line 1)
-                header = header + next_line + '\n' #Unused addition to header variable
-                continue
+            if line_number < 6: #Ignore header lines (lines 0-5)
+                 continue
             try:
-                #Edit array
-                next_line_array = next_line_array[0:len(headers)] 
-                del next_line_array[3]
-                print(next_line_array)
-                next_line_array[3] = float(next_line_array[3])*10**-2 #Convert from Oe to A/m (Cryo assumes 10cc vol.)
-                #stop editing the array
-                
+                #Remove excess columns
+                del next_line_array[3] #Delete CD column
+                next_line_array = next_line_array[0:6] #Remove trailing columns
+
+                next_line_array[3] = float(next_line_array[3])*25/pi #Convert from Oe to A/m (Cryo assumes 10cc vol.)
                 next_line = " ".join(str(x) for x in next_line_array).replace("Cm","T") #Array to string, replacing Cm with T
-                write_file.write(str(next_line.replace(' ', '\t'))+'\n') #generic_izzi.txt is like a csv but tabs instead of commas replace space with tab
+                write_file.write(str(next_line.replace(' ', '\t'))+'\n') #output format is tab-delimited
             except IndexError:
                 print("Index out of range error on this:")
                 print(next_line_array)
