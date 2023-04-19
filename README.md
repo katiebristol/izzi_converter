@@ -6,7 +6,7 @@
 
 This script was created to convert individual sample files previously
 made by Data Splitter into generic PmagPy format for IZZI paleointensity experiments.
-Files produced by this script can be used with PmagPy and paleointensity.org. 
+Files produced by this script can be used with PmagPy Thellier GUI and paleointensity.org. 
 Field intensity is output in A/m assuming a sample volume of 10cc. 
 
 ![Demo data.](/assets/input-output.png)
